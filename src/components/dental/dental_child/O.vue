@@ -1,0 +1,666 @@
+<template>
+  <div class="single-tooth border text-center">
+    <svg
+      id="CHID_DENT_all"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 15 57.85 113.68"
+      :style="`transform: rotate(${selectedTooth.alignement.distalTilting? selectedTooth.alignement.distalTilting: selectedTooth.alignement.mesialTilting}deg)`"
+    >
+      <g id="CHID_DENT_O_all">
+        <g id="CHID_DENT_O">
+          <path
+            id="CHID_DENT_CROWN_O"
+            v-if="selectedTooth.dent.crown1"
+              :class="[
+                { 'tooth-removable': selectedTooth.removable },
+                { 'tooth-bridge': selectedTooth.crown.bridge },
+                { 'tooth-laminateVeneer': selectedTooth.crown.laminateVeneer },
+                { 'tooth-denture': selectedTooth.crown.denture },
+                { 'tooth-onlay': selectedTooth.crown.onlay },
+                { 'tooth-postCrown': selectedTooth.crown.postCrown },
+                { 'tooth-full-veneer': selectedTooth.crown.fullVeneer },
+                { 'thooth-extraction': selectedTooth.extraction },
+              ]"
+            d="M256.73,255.82c2.16-.88,3.62-.3,19.25-.88,8.8-.33,14.18-.73,22.11-.11,5.7.44,7.17,1,7.76,1.21,3.13,1.31,2.41,3.24,1.15,7-.89,2.62-1.69,5.24-2.59,7.87-2.71,7.9-1.1,9.78-5.74,11.19-4.88,1.48-11.78,1-14.36.77-10.19-.75-15.84-4-17.81-5.09-4.21-2.4-3.48-3.56-7.47-11.64C255.47,258.9,253.55,257.13,256.73,255.82Z"
+            transform="translate(-254.23 -226.77)"
+            fill="none"
+            stroke="#1d1d1b"
+            stroke-miterlimit="10"
+            stroke-width="1.78"
+          />
+          <path
+            id="CHID_DENT_ROOT_O"
+            v-if="selectedTooth.dent.root1"
+            d="M270,280.87c-3.83.63-1.75,5-.58,10.64,1.59,7.61-.77,6.62.58,14.19.9,5.09,2,11.27,8,18.61,6.29,7.65,15.52,13.59,16.66,13.41.76-.12-2.86-2.85-4-7.42-.89-3.46.44-4.81,1.43-9.87.89-4.53-.13-3.69.58-11.52.54-6,.82-9.06,2-12.08,1-2.47,1.55-5,2.58-7.43,1.54-3.66,2.55-5.16.29-6-2.89-1-7.09.48-14.94-.22S272.59,280.43,270,280.87Z"
+            transform="translate(-254.23 -226.77)"
+            fill="none"
+            stroke="#1d1d1b"
+            stroke-miterlimit="10"
+            stroke-width="1.78"
+          />
+        </g>
+        <path
+          id="CHID_DENT_fiiling_caries_class_IV_Mesial_O"
+          v-if="selectedTooth.filling_caries_class_iv_mesial"
+          d="M272.9,274h-8.74l-1.44-3.28q-3-6.5-6.08-13c-.08-.13-.49-.91.77-1.5a5.42,5.42,0,0,1,1.11-.34l14.71-.34a13,13,0,0,1,4.52.25c1.51.42,2.28,1.14,2,1.87v13.67C279.76,272.83,276.69,274,272.9,274Z"
+          transform="translate(-254.23 -226.77)"
+          fill="#be1622"
+          stroke="#be1622"
+          stroke-miterlimit="10"
+          stroke-width="0.59"
+          opacity="0.79"
+        />
+        <path
+          id="CHID_DENT_filling_caries_Class_IV_Distal_O"
+          v-if="selectedTooth.filling_caries_class_iv_distal"
+          d="M291.34,274.3a40.13,40.13,0,0,1,0-4.57c.19-3.4.62-3.53.51-5.63a30.06,30.06,0,0,0-.76-5.83c-.49-1.72-1-2.82.5-3.24.46-.12,1-.16,6.3.33,5.05.46,5.82.62,6.54.87a4,4,0,0,1,2.36,1.9c1.16,2.19-.85,3.44-2.08,6.57-.48,1.22-.13.92-.78,3.48a41,41,0,0,1-2,5.93"
+          transform="translate(-254.23 -226.77)"
+          fill="#be1622"
+          stroke="#be1622"
+          stroke-miterlimit="10"
+          stroke-width="0.59"
+          opacity="0.79"
+        />
+        <rect
+          id="CHID_DENT_filling_caries_Class_V_O"
+          v-if="selectedTooth.filling_caries_class_v"
+          x="18.69"
+          y="49.5"
+          width="23.72"
+          height="2.56"
+          rx="0.87"
+          fill="#be1622"
+          stroke="#be1622"
+          stroke-miterlimit="10"
+          stroke-width="0.59"
+          opacity="0.79"
+        />
+        <path
+          id="CHID_DENT_filling_caries_Class_III_Mesial_O"
+          v-if="selectedTooth.filling_caries_class_iii_mesial"
+          d="M299.29,269.61H292.5c-2.34,0-4.24-.84-4.24-1.88v-1c0-1,1.9-1.88,4.24-1.88h6.79l5.08.93h0l-.81,3h0Z"
+          transform="translate(-254.23 -226.77)"
+          fill="#be1622"
+          stroke="#be1622"
+          stroke-miterlimit="10"
+          stroke-width="0.59"
+          opacity="0.79"
+        />
+        <path
+          id="CHID_DENT_filling_caries_Class_III_Distal_O"
+          v-if="selectedTooth.filling_caries_class_iii_distal"
+          d="M271.68,269.61h-4.54l-3.87-.75-1-.21-1.86-3.18,6.74-.65h4.54c2.66,0,4.82.83,4.82,1.86v1.07C276.5,268.78,274.34,269.61,271.68,269.61Z"
+          transform="translate(-254.23 -226.77)"
+          fill="#be1622"
+          stroke="#be1622"
+          stroke-miterlimit="10"
+          stroke-width="0.59"
+          opacity="0.79"
+        />
+        <path
+          id="CHID_DENT_EndoO"
+          v-if="selectedTooth.endo.endo1 || selectedTooth.pulp.pulp1"
+          :fill="selectedTooth.endo.endo1 ? '#be1622' : '#e67e22'"
+          :stroke="selectedTooth.endo.endo1 ? '#e30613' : '#e67e22'"
+          d="M274.39,282.38c1-.08,2.18.73,6.5,1.2,4.88.53,7.3-.08,9.08.2,6.44,1-.82,12.74-3.63,21-4.65,13.72,1.46,22.07-.26,22.14C282.16,327.14,267.34,282.92,274.39,282.38Z"
+          transform="translate(-254.23 -226.77)"
+          stroke-miterlimit="10"
+          stroke-width="0.59"
+        />
+        <g id="CHID_DENT_Post_O" v-if="selectedTooth.post.post1">
+          <path
+            d="M295.11,282.53l-18.76-.22c-.69,0-1.21-.32-1.14-.7l.47-2.74c.06-.39.68-.69,1.38-.68l18.76.22c.69,0,1.2.32,1.14.7l-.47,2.74C296.42,282.24,295.81,282.54,295.11,282.53Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            d="M281.23,315l-2.37,0c-1.23,0-2.13-.58-2-1.25l5.26-30.73c.12-.68,1.21-1.21,2.44-1.2l2.37,0c1.23,0,2.14.57,2,1.25l-5.26,30.73C283.55,314.42,282.46,315,281.23,315Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            d="M290.86,289.05,278,288.9c-.34,0-.59-.16-.56-.34l.15-.89c0-.18.34-.33.68-.33l12.84.15c.34,0,.59.16.56.35l-.15.88C291.51,288.91,291.2,289.06,290.86,289.05Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            d="M290.27,293.74l-12.92-.15c-.32,0-.56-.15-.53-.33l.16-.92c0-.18.31-.32.63-.31l12.92.15c.32,0,.56.15.53.32l-.16.93C290.87,293.6,290.59,293.74,290.27,293.74Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            d="M289.25,298.42l-12.82-.15c-.35,0-.6-.16-.57-.35l.15-.87c0-.19.34-.35.69-.34l12.82.15c.34,0,.6.16.57.35l-.15.87C289.9,298.27,289.6,298.42,289.25,298.42Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            d="M288.67,303.1,275.73,303c-.31,0-.54-.14-.51-.32l.16-.93c0-.17.31-.31.62-.31l12.94.15c.31,0,.54.15.52.32l-.17.94C289.27,303,289,303.11,288.67,303.1Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            d="M287.89,307.79l-13-.15c-.31,0-.53-.15-.51-.31l.17-1c0-.16.3-.3.6-.29l12.89.15c.35,0,.61.16.58.35l-.16.91C288.46,307.66,288.19,307.79,287.89,307.79Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            d="M286.85,312.47,274,312.32c-.34,0-.6-.16-.57-.35l.15-.88c0-.19.34-.34.69-.33l12.82.15c.35,0,.6.16.57.35l-.15.87C287.5,312.32,287.19,312.47,286.85,312.47Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="34.06"
+            y1="80.93"
+            x2="19.42"
+            y2="85.47"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="34.23"
+            y1="79.54"
+            x2="19.58"
+            y2="84.09"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="34.93"
+            y1="76.21"
+            x2="20.36"
+            y2="80.79"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="35.08"
+            y1="74.89"
+            x2="20.58"
+            y2="79.38"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="35.43"
+            y1="71.57"
+            x2="21.16"
+            y2="76.1"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="35.69"
+            y1="70.18"
+            x2="21.34"
+            y2="74.72"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="36.49"
+            y1="66.86"
+            x2="21.76"
+            y2="71.38"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="36.65"
+            y1="65.48"
+            x2="22.07"
+            y2="70.01"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="37.08"
+            y1="62.19"
+            x2="22.77"
+            y2="66.74"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="37.28"
+            y1="60.8"
+            x2="23.05"
+            y2="65.31"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            d="M273.56,310.58"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            d="M292.64,279.2l-12.79-.15c-1.36,0-2.36-.63-2.23-1.38l.57-3.32c.13-.75,1.34-1.35,2.7-1.33l12.78.15c1.37,0,2.37.63,2.24,1.38l-.57,3.33C295.21,278.62,294,279.22,292.64,279.2Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+        </g>
+        <g id="CHID_DENT_Ginfivitis_O">
+          <path
+            id="CHID_DENT_Right_Ginfivitis_O"
+            v-if="selectedTooth.ginfivitis.right"
+            d="M304,278.66c-.92.15.2,1-1.23,2.08s-4.55,1.36-4.43,2.09c.07.4,1,.5,1.72.95,1.77,1.06.27,2.57-.24,3.13-2.24,2.47-1.69,5.2-2.71,7.78-3.59,9.16-1.72,6.89-2.46,7.88s-1.59,1.95-.24,2.56c1.71.79,6.8.75,9.59-.09,6.09-1.84-3.3-6.15,0-12.91,2.55-5.22,10.41-7.29,6.89-10.63C309.22,279.9,305.34,278.43,304,278.66Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            id="CHID_DENT_Left_Ginfivitis_O"
+            v-if="selectedTooth.ginfivitis.left"
+            d="M263,276.57c1.09.12.85.7,2.7,1.71,2.08,1.12,4.18,1.37,3.94,1.89s-1.4.4-2.46.86c-1.76.76-1.25,1.94-1,2.66.65,1.72.38,3.49,1,5.22.24.68.57,2.38,1.23,5.78,1.13,5.84,1.65,8.76-.25,9s-5.7-1.46-7.87-3.13c-4.72-3.63,0-5.57-1-11.11s-6.5-7.81-2.22-10.81C258.38,277.72,261.15,276.37,263,276.57Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            id="CHID_DENT_Right_periodontal_O"
+            v-if="selectedTooth.periodontal.right"
+            d="M304,278.66c-.92.15.2,1-1.23,2.08s-4.55,1.36-4.43,2.09c.07.4,1,.5,1.72.95,1.77,1.06.27,2.57-.24,3.13-2.24,2.47-1.69,5.2-2.71,7.78-3.59,9.16-1.72,6.89-2.46,7.88s-1.59,1.95-.24,2.56c1.71.79,6.8.75,9.59-.09,6.09-1.84-3.3-6.15,0-12.91,2.55-5.22,10.41-7.29,6.89-10.63C309.22,279.9,305.34,278.43,304,278.66Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e67e22"
+            stroke="#e67e22"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            id="CHID_DENT_Left_periodontal_O"
+            v-if="selectedTooth.periodontal.left"
+            d="M263,276.57c1.09.12.85.7,2.7,1.71,2.08,1.12,4.18,1.37,3.94,1.89s-1.4.4-2.46.86c-1.76.76-1.25,1.94-1,2.66.65,1.72.38,3.49,1,5.22.24.68.57,2.38,1.23,5.78,1.13,5.84,1.65,8.76-.25,9s-5.7-1.46-7.87-3.13c-4.72-3.63,0-5.57-1-11.11s-6.5-7.81-2.22-10.81C258.38,277.72,261.15,276.37,263,276.57Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e67e22"
+            stroke="#e67e22"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            id="CHID_DENT_Right_perio_O"
+            v-if="selectedTooth.perio.right"
+            d="M304,278.66c-.92.15.2,1-1.23,2.08s-4.55,1.36-4.43,2.09c.07.4,1,.5,1.72.95,1.77,1.06.27,2.57-.24,3.13-2.24,2.47-1.69,5.2-2.71,7.78-3.59,9.16-1.72,6.89-2.46,7.88s-1.59,1.95-.24,2.56c1.71.79,6.8.75,9.59-.09,6.09-1.84-3.3-6.15,0-12.91,2.55-5.22,10.41-7.29,6.89-10.63C309.22,279.9,305.34,278.43,304,278.66Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#c0392b"
+            stroke="#c0392b"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            id="CHID_DENT_Left_perio_O"
+            v-if="selectedTooth.perio.left"
+            d="M263,276.57c1.09.12.85.7,2.7,1.71,2.08,1.12,4.18,1.37,3.94,1.89s-1.4.4-2.46.86c-1.76.76-1.25,1.94-1,2.66.65,1.72.38,3.49,1,5.22.24.68.57,2.38,1.23,5.78,1.13,5.84,1.65,8.76-.25,9s-5.7-1.46-7.87-3.13c-4.72-3.63,0-5.57-1-11.11s-6.5-7.81-2.22-10.81C258.38,277.72,261.15,276.37,263,276.57Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#c0392b"
+            stroke="#c0392b"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+        </g>
+        <g id="CHID_DENT_Implant_O" v-if="selectedTooth.implant">
+          <path
+            d="M305.37,286.17l-39.7,0c-1.47,0-2.65-.37-2.64-.83l.09-3.28c0-.46,1.21-.83,2.68-.83l39.7,0c1.48,0,2.66.37,2.65.82l-.09,3.29C308.05,285.8,306.84,286.17,305.37,286.17Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            d="M286.73,325.14h-5c-2.61,0-4.7-.65-4.68-1.46l1-36.81c0-.81,2.15-1.47,4.75-1.47h5c2.6,0,4.69.65,4.67,1.46l-1,36.82C291.46,324.48,289.33,325.14,286.73,325.14Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            d="M298.54,294l-27.17,0c-.72,0-1.3-.18-1.29-.41l0-1c0-.23.6-.41,1.32-.41l27.17,0c.73,0,1.31.18,1.3.41l0,1.05C299.86,293.85,299.27,294,298.54,294Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            d="M298.83,299.64l-27.34,0c-.68,0-1.22-.17-1.21-.38l0-1.11c0-.21.55-.38,1.23-.38l27.34,0c.67,0,1.22.17,1.21.38l0,1.11C300.06,299.47,299.5,299.64,298.83,299.64Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            d="M298.22,305.25l-27.12,0c-.74,0-1.33-.18-1.32-.41l0-1c0-.23.61-.42,1.35-.42l27.12,0c.73,0,1.33.19,1.32.42l0,1C299.56,305.07,299,305.25,298.22,305.25Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            d="M298.55,310.87l-27.38,0c-.67,0-1.2-.16-1.2-.37l0-1.12c0-.21.55-.38,1.22-.38l27.38,0c.66,0,1.2.16,1.19.37l0,1.12C299.76,310.7,299.21,310.87,298.55,310.87Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            d="M298.43,316.48l-27.45,0c-.64,0-1.16-.16-1.16-.36l0-1.14c0-.2.54-.37,1.18-.37l27.27,0c.74,0,1.35.18,1.34.42l0,1.08C299.6,316.31,299.08,316.48,298.43,316.48Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            d="M297.77,322.09l-27.13,0c-.73,0-1.32-.19-1.32-.41l0-1c0-.23.61-.41,1.34-.41l27.13,0c.74,0,1.32.18,1.32.41l0,1.05C299.1,321.9,298.51,322.09,297.77,322.09Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="45.03"
+            y1="89.6"
+            x2="15.59"
+            y2="95.25"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="44.92"
+            y1="87.93"
+            x2="15.48"
+            y2="93.61"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="45.29"
+            y1="83.93"
+            x2="16.03"
+            y2="89.65"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="45.18"
+            y1="82.36"
+            x2="16.04"
+            y2="87.96"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="44.83"
+            y1="78.39"
+            x2="16.18"
+            y2="84.03"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="44.91"
+            y1="76.72"
+            x2="16.11"
+            y2="82.37"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="45.52"
+            y1="72.74"
+            x2="15.89"
+            y2="78.37"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="45.41"
+            y1="71.09"
+            x2="16.1"
+            y2="76.73"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="45.22"
+            y1="67.15"
+            x2="16.49"
+            y2="72.81"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <line
+            x1="45.19"
+            y1="65.48"
+            x2="16.62"
+            y2="71.1"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            d="M269.08,320.05"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+          <path
+            d="M299.05,282.23l-27.05,0c-2.89,0-5.2-.72-5.18-1.61l.11-4c0-.89,2.38-1.62,5.26-1.62l27.06,0c2.88,0,5.19.72,5.17,1.62l-.11,4C304.29,281.5,301.93,282.23,299.05,282.23Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="0.59"
+          />
+        </g>
+        <path
+          id="CHID_DENT_Periapical_O"
+          v-if="selectedTooth.periapical.periapical1"
+          d="M293.64,320.28c-.54,0-.44.88-1,3.55s-.79,2.68-.83,4a8.46,8.46,0,0,0,.55,3.59c.81,2.1,1.21,3.14,2.37,3.92.47.32,1.78,1.14,1.53,2.05a1.06,1.06,0,0,1-.83.69,5.9,5.9,0,0,1-2.09,0,4.86,4.86,0,0,1-3.2-1.77c-1.46-1.49-2.23-1.12-5.15-3.27-1.84-1.36-1.31-1.34-4.73-4.73-2.81-2.78-3.31-2.93-4.32-4.35-1.26-1.77-1.43-2.85-1.95-2.85s-1.32,1.67-1,3.33,1.4,2.56,3.62,4.57c3.57,3.24,5.36,4.86,7.1,6.17,6.09,4.62,8.13,4.91,9.46,4.94a10.65,10.65,0,0,0,6.39-1.78c1.5-1.28-.56-2.09-2.08-4.82a11.16,11.16,0,0,1-1.25-6.93,5.56,5.56,0,0,0,0-3.22C295.75,321.86,294.39,320.25,293.64,320.28Z"
+          transform="translate(-254.23 -226.77)"
+          fill="#be1622"
+          stroke="#be1622"
+          stroke-miterlimit="10"
+          stroke-width="0.59"
+        />
+        <g id="CHID_DENT_Occlusal_Veneer_O">
+          <path
+            id="CHID_DENT_Occlusal_Veneer_O_2"
+            v-if="selectedTooth.crown.occlusalVeneer"
+            d="M266.86,255.72l-5.84.44a7.77,7.77,0,0,0-3.38.82.59.59,0,0,0-.17.81,12.85,12.85,0,0,1,.85,3.58,2.57,2.57,0,0,0,.84.78,7.15,7.15,0,0,0,1.75.77h5.95c1.81,0,3.27-.57,3.27-1.26V257C270.13,256.28,268.67,255.72,266.86,255.72Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="1.78"
+          />
+          <path
+            id="CHID_DENT_Occlusal_Veneer_O_1"
+            v-if="selectedTooth.crown.occlusalVeneer"
+            d="M296.13,255.44l5.57.39a10.12,10.12,0,0,1,3.37.79,2.15,2.15,0,0,1,1,.84c-.05,1.31-.11,2.61-.16,3.91,0,.12.22.64-.68,1.11a5.29,5.29,0,0,1-1.43.44H296c-1.78,0-3.22-.56-3.22-1.24v-5.39c-.19-.34.18-.7.94-.88A5.16,5.16,0,0,1,296.13,255.44Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="1.78"
+          />
+          <path
+            id="CHID_DENT_Occlusal_Veneer_O_2"
+            v-if="selectedTooth.crown.onlay"
+            d="M266.86,255.72l-5.84.44a7.77,7.77,0,0,0-3.38.82.59.59,0,0,0-.17.81,12.85,12.85,0,0,1,.85,3.58,2.57,2.57,0,0,0,.84.78,7.15,7.15,0,0,0,1.75.77h5.95c1.81,0,3.27-.57,3.27-1.26V257C270.13,256.28,268.67,255.72,266.86,255.72Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#FFC0CB"
+            stroke="#FFC0CB"
+            stroke-miterlimit="10"
+            stroke-width="1.78"
+          />
+          <path
+            id="CHID_DENT_Occlusal_Veneer_O_1"
+            v-if="selectedTooth.crown.onlay"
+            d="M296.13,255.44l5.57.39a10.12,10.12,0,0,1,3.37.79,2.15,2.15,0,0,1,1,.84c-.05,1.31-.11,2.61-.16,3.91,0,.12.22.64-.68,1.11a5.29,5.29,0,0,1-1.43.44H296c-1.78,0-3.22-.56-3.22-1.24v-5.39c-.19-.34.18-.7.94-.88A5.16,5.16,0,0,1,296.13,255.44Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#FFC0CB"
+            stroke="#FFC0CB"
+            stroke-miterlimit="10"
+            stroke-width="1.78"
+          />
+          
+        </g>
+        <g id="CHID_DENT_Endo_Crown_O">
+          <path
+            id="CHID_DENT_Endo_Crown_O_2"
+            v-if="selectedTooth.endo_crown.crown2"
+            d="M266.91,255.6l-5.85.44c-.91.07-2.7.26-3.37.82a.59.59,0,0,0-.17.81,12.57,12.57,0,0,1,.84,3.58,2.88,2.88,0,0,0,.85.78,7.56,7.56,0,0,0,1.75.77h6c1.8,0,3.27-.57,3.27-1.26v-4.68C270.18,256.16,268.71,255.6,266.91,255.6Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="1.78"
+          />
+          <path
+            id="CHID_DENT_Endo_Crown_O_1"
+            v-if="selectedTooth.endo_crown.crown1"
+            d="M296.17,255.32l5.57.39a10.35,10.35,0,0,1,3.38.78,2.27,2.27,0,0,1,1,.85c-.05,1.3-.11,2.61-.17,3.91.05.12.22.64-.67,1.11a5.4,5.4,0,0,1-1.43.44H296c-1.77,0-3.21-.56-3.21-1.24v-5.39c-.2-.34.18-.7.94-.88A5.11,5.11,0,0,1,296.17,255.32Z"
+            transform="translate(-254.23 -226.77)"
+            fill="#e30613"
+            stroke="#e30613"
+            stroke-miterlimit="10"
+            stroke-width="1.78"
+          />
+        </g>
+      </g>
+    </svg>
+      <span class="text-center my-3">O</span>
+  </div>
+</template>
+<script>
+export default {
+    props:["selectedTooth"]
+}
+</script>
+<style  lang="scss" scoped>
+.single-tooth{
+    width:100% ;
+    height:100% ;
+    position: relative;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+    span {
+      background: $tradmark-color;
+      text-align: center;
+      width:45px;
+      height: 45px;
+      font-size: 22px;
+      font-weight: 500;
+      padding: 10px;
+      border-radius: 20px;
+      color:#FFF;
+      position: absolute;
+      line-height: 1.3;
+      bottom: -35px;
+      left: 40%;
+    }
+}
+</style>
